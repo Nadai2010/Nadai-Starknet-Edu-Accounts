@@ -1,3 +1,5 @@
+## Nadai Soluciones Accounts
+
 Primero clonaremos el repositorio
 
 ```bash
@@ -34,7 +36,7 @@ pip3 install --upgrade -r requirements.txt
 pip install starknet.py
 ```
 
-## Red de desarrolo DEVNET
+## Red de desarrollo DEVNET
 
 Las transacciones tardan en completarse en [testnet](https://goerli.voyager.online), por lo que primero debe desarrollar y depurar localmente.
 
@@ -43,7 +45,7 @@ Las transacciones tardan en completarse en [testnet](https://goerli.voyager.onli
 ```bash
 starknet-devnet
 ```
-![Graph](/Imagenes/devnet.png)
+![Graph](/Imágenes/devnet.png)
 
 * Ejecutar `deploy` evaluator en otra terminal activando el modo de entorno y ejecutar.
 
@@ -55,7 +57,7 @@ cd contracts
 python3 tutorial/evaluator.py
 ```
 
-![Graph](/Imagenes/Evaluator.png)
+![Graph](/Imágenes/Evaluator.png)
 
 * Deploy/test el contrato hello. 
 
@@ -65,7 +67,7 @@ python3 hello/hello.py
 
 No hubo `elementos de acción` que deba completar, por lo que debería ver una respuesta exitosa de `¡DÍA DE PAGO!` del contrato del evaluador de devnet.
 
-![Graph](/Imagenes/hello.png)
+![Graph](/Imágenes/hello.png)
 
 
 Las direcciones de contrato del evaluador relevantes se guardan en la memoria caché `contracts/accounts.json`. Para las pruebas de devnet, los contratos de devnet `DEBEN SER ELIMINADOS` cada vez que se reinicia devnet. Si desea deshabilitar esta ejecución de caché de contrato:
@@ -84,7 +86,7 @@ Por motivos de seguridad no suba fotos o cuentas con saldos, solo cuentas que pu
 
 Desde su billetera copie su direción (`0x0742B5662...6476f8f`), la pasaremos a felt usando [esta herramienta](https://util.turbofish.co) y su representación felt la añadiremos en `config.json` `TESTNET_ACCOUNT` -> `ADDRESS`
 
-![Graph](/Imagenes/account.png)
+![Graph](/Imágenes/account.png)
 
 ### CLAVE PRIVADA
 
@@ -94,5 +96,5 @@ Seleccione los tres puntos verticales para mostrar las opciones de billetera. Lu
 
 Seleccione los tres puntos verticales para mostrar las opciones de billetera y deleccione `Ver en Voyager`. Desde Voyager Block Explorer, seleccione la pestaña `READ contract` -> `IMPLEMENTATION`.Despliega el selector `get_signer`. Luego Seleccione la consulta `Decimal`y copie la clave pública de esta pantalla y péguela en `config.json` `TESNET_ACCOUNT` -> `PUBLIC`
 
-![Graph](/Imagenes/signer.png)
+![Graph](/Imágenes/signer.png)
 
